@@ -108,5 +108,5 @@ async def get_playlist(_, message: Message):
         query = i["query"]
         ples += f"{j}. {query}\n"
     await message.reply(
-        f"Current streaming\n{current['query']}\n\nOn Playlist\n\n{ples}"
+        f"Current streaming\n{current['query']}\n\n{'On Playlist' if playlist[chat_id][1:] else ''}\n\n{ples}"
     )
